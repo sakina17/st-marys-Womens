@@ -1,43 +1,114 @@
 <!DOCTYPE html>
-<head>   
-</head>
-<title>satwiki</title>
-<style>
-    body{
-        background-image:url("hd.jpg");
-        background-size:cover;
-    }
-    h1{
-        color: azure;
-    }
-    form{
-        width:45%;
-        background-color:rgb(112, 67, 126);
-        opacity:0.5;
-    }
-    input[type="text"],[type="password"],[type="number"],[type="date"],[type="register"]{
-        width:50%;
-        height="200px"
-        font-size:45px;
-        padding: 15px 20px;
-        margin: 10px;
-        outline: 10px;
-        textline:center;
+<html>
+<head>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
         }
-</style>
-<body> 
-<center>
-<h1>Create your account</h1><br><br><br><br><br><br><br><br>
-<form method="post">
-    <input type="text"placeholder="firstname"/><br>
-    <input type="text"placeholder="Lastname"/><br>
-    <input type="password"placeholder="Password"/><br>
-    <input type="number"placeholder="Mobile"/><br>
-    <input type="date"><br>
-    <input type="number"placeholder="age"><br>
-    <input type="submit" value="register"><br>
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#Band">Band</a></li>
+          <li><a href="#Tour">Tour</a></li>
+          <li><a href="#concert">concert</a></li>
+        </ul>
+    </style>
+</head>    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
 
-    </form>
-</center>
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="https://www.nawpic.com/media/2020/bts-laptop-nawpic-12.jpg"
+  style="width:85%">
+  <img class="mySlides" src="https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/big_hit_announces_bts_map_of_the_soul_one_concert_to_take_place_in_october_to_be_both_online_and_offline_event.jpg"
+  style="width:85%">
+  <img class="mySlides" src="https://i.ytimg.com/vi/gwMa6gpoE9I/maxresdefault.jpg"
+  style="width:85%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:700px">
+  <h2 class="w3-wide">THE BAND</h2>
+  <p class="w3-opacity"><i>We love music</i></p>
+  <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1>Taekook</h1>
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-ded537cca07d656ef6dc1481f36d8054-lq" alt="Random Name" style="width:80%">
+    <p>They are couple.</p>
+  </article>
+  <article class="w3-third">
+    <h1>vminkook</h1>
+    <img src="https://wallpapercave.com/wp/wp4320779.jpg" alt="Random Name" style="width:80%">
+    <p>They are crackheads.</p>
+  </article>
+  <article class="w3-third">
+    <h1>Hyungs</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj-a6JcfxLOHRm2ILDrBMz8u_YPenbpWpdXA&usqp=CAU" alt="Random Name" style="width:80%">
+    <p>The parents.</p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
 </body>
 </html>
+
